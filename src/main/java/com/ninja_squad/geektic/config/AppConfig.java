@@ -45,7 +45,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         result.setPersistenceProviderClass(HibernatePersistenceProvider.class);
         return result;
     }
-	//ça me fane
+
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource("jdbc:hsqldb:hsql://localhost/GEEKTIC", "sa", "");
