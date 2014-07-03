@@ -25,6 +25,6 @@ public class ExampleDaoTest extends BaseDaoTest {
 
     @Test
     public void testSomeDaoMethod() {
-        // implement your test here, by calling the exampleDao method to test.
+        
     }
 }
