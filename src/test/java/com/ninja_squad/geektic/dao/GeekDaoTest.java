@@ -25,8 +25,8 @@ public class GeekDaoTest extends BaseDaoTest{
 
 	@Test
 	public void testGetGeekById() {
-		Geek monGeek = GeekTest.getGeekById(1);
-		assertEquals(monGeek.getPrenom(),"Affou");
+		Geek monGeek = GeekTest.getGeekById(4);
+		assertEquals(monGeek.getPrenom(),"Adam");
 	}
 
 }

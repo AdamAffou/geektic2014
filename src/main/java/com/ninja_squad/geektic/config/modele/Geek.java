@@ -15,7 +15,14 @@ public class Geek {
     @Column(name="ID")
 	private int id;
     
-    @Column(name="NOM")
+    public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	@Column(name="NOM")
     private String nom;
 
     @Column(name="PRENOM")
