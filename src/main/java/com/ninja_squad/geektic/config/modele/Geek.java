@@ -27,7 +27,7 @@ public class Geek {
     @Column(name="GRAVATAR")
     private String urlGravatar;
     
-    @ManyToMany
+    @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(name = "GEEK_INTERET",
                joinColumns = @JoinColumn(name = "IDGEEK"),
                inverseJoinColumns = @JoinColumn(name = "IDINTERET"))

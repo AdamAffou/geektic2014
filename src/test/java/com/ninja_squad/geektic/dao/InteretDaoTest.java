@@ -7,9 +7,7 @@ import java.util.List;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.ninja_squad.geektic.config.dao.GeekDao;
 import com.ninja_squad.geektic.config.dao.InteretDao;
-import com.ninja_squad.geektic.config.modele.Geek;
 import com.ninja_squad.geektic.config.modele.Interet;
 
 public class InteretDaoTest extends BaseDaoTest{

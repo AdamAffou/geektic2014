@@ -5,3 +5,8 @@ app.controller('HelloCtrl', function($scope, $http) {
         $scope.helloMessage = helloMessage;
     });
 });
+app.controller('Geeks', function($scope, $http) {
+    $http.get('/Geeks').success(function(Geeks) {
+        $scope.Geeks = Geeks;
+    });
+});
