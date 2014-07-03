@@ -27,6 +27,9 @@ public class Geek {
     @Column(name="GRAVATAR")
     private String urlGravatar;
     
+    @Column(name="SEXE")
+    private String sexe;
+    
     @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(name = "GEEK_INTERET",
                joinColumns = @JoinColumn(name = "IDGEEK"),
@@ -35,13 +38,14 @@ public class Geek {
 
     public Geek()
     {}
-	public Geek( String nom, String prenom, String mail,String urlGravatar) 
+	public Geek( String nom, String prenom, String mail,String urlGravatar, String sexe) 
 	{
 
 		this.nom = nom;
 		this.prenom = prenom;
 		this.mail = mail;
 		this.urlGravatar = urlGravatar;
+		this.sexe=sexe;
 	}
 
 	public String getNom() {

@@ -1,12 +1,28 @@
 var app = angular.module("geektic", ['ngRoute']);
 
-app.controller('HelloCtrl', function($scope, $http) {
-    $http.get('/api/hello').success(function(helloMessage) {
-        $scope.helloMessage = helloMessage;
-    });
+app.config(function($routeProvider){
+    
+    $routeProvider
+    .when('/', {
+        templateUrl: '/views/accueil.html'})
+      
+    .when('/Geeks/:sexe', {
+        templateUrl: '/views/GetLesGeeks.html',
+        controller: 'Geeks'})
 });
-app.controller('Geeks', function($scope, $http) {
-    $http.get('/Geeks').success(function(Geeks) {
+    
+
+app.controller('Geeks', function($scope, $http, $routeParams) {
+	
+	 $http.get('/Geeks/' + $routeParams.sexe).success(function(Geeks) {
+	        $scope.Geeks = Geeks;
+	 });
+	 
+   /* $http.get('/Geeks').success(function(Geeks) {
         $scope.Geeks = Geeks;
+    });*/
+	 
+    $http.get('/Interets').success(function(Interets) {
+        $scope.Interets = Interets;
     });
 });
