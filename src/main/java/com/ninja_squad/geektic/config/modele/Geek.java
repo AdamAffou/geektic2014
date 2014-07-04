@@ -43,8 +43,16 @@ public class Geek {
                inverseJoinColumns = @JoinColumn(name = "IDINTERET"))
     private Set<Interet> interets;
 
-    public Geek()
+    public Set<Interet> getInterets() {
+		return interets;
+	}
+	public void setInterets(Set<Interet> interets) {
+		this.interets = interets;
+	}
+	
+	public Geek()
     {}
+	
 	public Geek( String nom, String prenom, String mail,String urlGravatar, String sexe) 
 	{
 

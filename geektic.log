@@ -161,3 +161,13 @@ line 1:13: expecting IDENT, found '*'
 21:25:45,199 DEBUG main hibernate.SQL:109 - select geek0_.ID as ID1_0_0_, geek0_.MAIL as MAIL2_0_0_, geek0_.NOM as NOM3_0_0_, geek0_.PRENOM as PRENOM4_0_0_, geek0_.SEXE as SEXE5_0_0_, geek0_.GRAVATAR as GRAVATAR6_0_0_, interets1_.IDGEEK as IDGEEK1_0_1_, interet2_.ID as IDINTERE2_1_1_, interet2_.ID as ID1_2_2_, interet2_.DESCRIPTION as DESCRIPT2_2_2_, interet2_.NOM as NOM3_2_2_ from GEEK geek0_ left outer join GEEK_INTERET interets1_ on geek0_.ID=interets1_.IDGEEK left outer join INTERET interet2_ on interets1_.IDINTERET=interet2_.ID where geek0_.ID=?
 21:25:45,447 DEBUG main hibernate.SQL:109 - select geek0_.ID as ID1_0_, geek0_.MAIL as MAIL2_0_, geek0_.NOM as NOM3_0_, geek0_.PRENOM as PRENOM4_0_, geek0_.SEXE as SEXE5_0_, geek0_.GRAVATAR as GRAVATAR6_0_ from GEEK geek0_ where geek0_.SEXE=?
 21:25:45,553 DEBUG main hibernate.SQL:109 - select interets0_.IDGEEK as IDGEEK1_0_0_, interets0_.IDINTERET as IDINTERE2_1_0_, interet1_.ID as ID1_2_1_, interet1_.DESCRIPTION as DESCRIPT2_2_1_, interet1_.NOM as NOM3_2_1_ from GEEK_INTERET interets0_ inner join INTERET interet1_ on interets0_.IDINTERET=interet1_.ID where interets0_.IDGEEK=?
+11:24:15,499 DEBUG main hibernate.SQL:109 - call next value for cons_seq
+11:24:15,750 ERROR main spi.SqlExceptionHelper:146 - user lacks privilege or object not found: CONS_SEQ
+11:27:32,891 DEBUG main hibernate.SQL:109 - insert into CONSULTATION (ADRESSEIP, DATE, IDGEEK, ID) values (?, ?, ?, ?)
+11:27:48,798 DEBUG main hibernate.SQL:109 - insert into CONSULTATION (ADRESSEIP, DATE, IDGEEK, ID) values (?, ?, ?, ?)
+11:27:48,828 ERROR main spi.SqlExceptionHelper:146 - integrity constraint violation: unique constraint or index violation; SYS_PK_10318 table: CONSULTATION
+11:34:01,201 DEBUG main hibernate.SQL:109 - insert into CONSULTATION (ADRESSEIP, DATE, IDGEEK, ID) values (?, ?, ?, ?)
+11:39:54,629 DEBUG main hibernate.SQL:109 - insert into CONSULTATION (ID, ADRESSEIP, DATE, IDGEEK) values (default, ?, ?, ?)
+11:40:26,418 DEBUG main hibernate.SQL:109 - insert into CONSULTATION (ID, ADRESSEIP, DATE, IDGEEK) values (default, ?, ?, ?)
+11:41:00,773 DEBUG main hibernate.SQL:109 - insert into CONSULTATION (ID, ADRESSEIP, DATE, IDGEEK) values (default, ?, ?, ?)
+11:41:10,045 DEBUG main hibernate.SQL:109 - insert into CONSULTATION (ID, ADRESSEIP, DATE, IDGEEK) values (default, ?, ?, ?)

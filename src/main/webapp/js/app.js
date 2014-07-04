@@ -21,6 +21,22 @@ app.controller('LeGeek', function($scope, $http, $routeParams) {
 });
 
 app.controller('Geeks', function($scope, $http, $routeParams) {
+	$scope.selection = {monInteret:0};
+	$scope.filtrer=function(monGeek)
+	{
+		if($scope.selection.monInteret!=0)
+		{
+		    for(var i =0; i < monGeek.interets.length; i++){
+		            
+		            if( monGeek.interets[i].id == $scope.selection.monInteret){
+		                    return true;
+		            }        
+		    }
+		    return false;
+		}
+		else
+			{return true;}
+	}
 	
 	 $http.get('/Geeks/' + $routeParams.sexe).success(function(Geeks) {
 	        $scope.Geeks = Geeks;
@@ -30,7 +46,7 @@ app.controller('Geeks', function($scope, $http, $routeParams) {
         $scope.Geeks = Geeks;
     });*/
 	 
-    $http.get('/Interets').success(function(Interets) {
-        $scope.Interets = Interets;
-    });
+	 $http.get('/Interets').success(function(Interets) {
+	        $scope.Interets = Interets;
+	    });
 });

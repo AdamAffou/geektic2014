@@ -27,5 +27,5 @@ public class GeekDao {
 	 {
          return em.find(Geek.class, id); 
 	 }
-
+	 
 }
